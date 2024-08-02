@@ -1,6 +1,6 @@
 ---
 title: YourMT3
-emoji: 👀
+emoji: 🎸
 colorFrom: purple
 colorTo: red
 sdk: gradio
@@ -9,7 +9,6 @@ app_file: app.py
 pinned: false
 license: apache-2.0
 ---
-
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/yourmt3-multi-instrument-music-transcription/multi-instrument-music-transcription-on)](https://paperswithcode.com/sota/multi-instrument-music-transcription-on?p=yourmt3-multi-instrument-music-transcription) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/yourmt3-multi-instrument-music-transcription/music-transcription-on-slakh2100)](https://paperswithcode.com/sota/music-transcription-on-slakh2100?p=yourmt3-multi-instrument-music-transcription) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/yourmt3-multi-instrument-music-transcription/drum-transcription-in-music-dtm-on-enst-drums)](https://paperswithcode.com/sota/drum-transcription-in-music-dtm-on-enst-drums?p=yourmt3-multi-instrument-music-transcription)
 
 ![yourmt3-low-resolution-color-logo-crop](https://user-images.githubusercontent.com/26891722/204390355-001877a1-d019-46d7-a33c-d3a3adc0743c.png)
