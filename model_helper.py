@@ -600,10 +600,10 @@ def main():
         "device",
         nargs="?",
         choices=["cpu", "cuda", "cuda:0", "cuda:1"],
-        default="None",
+        default=None,
         type=str,
     )
     args = parser.parse_args()
 
-    model = load_default_model()
+    model = load_default_model(args.device)
     transcribe(model, args.audio_file, args.midi_file)
