@@ -1,0 +1,23 @@
+python-dotenv
+torch==2.2.2
+torchaudio==2.2.2
+yt-dlp
+yt-dlp-youtube-oauth2 @ https://github.com/coletdjnz/yt-dlp-youtube-oauth2/archive/refs/heads/master.zip
+mido
+mir-eval @ git+https://github.com/craffel/mir_eval.git
+lightning>=2.2.1
+deprecated
+librosa
+einops
+transformers==4.45.1
+numpy==1.26.4
+wandb
+gradio-log
+
+[dev]
+matplotlib
+mirdata
+pytest
+pytest-timeout
+cosine-annealing-warmup @ git+https://github.com/katsura-jp/pytorch-cosine-annealing-with-warmup.git
+smart-open

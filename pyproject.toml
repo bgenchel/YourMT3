@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yourmt3"
+version = "0.1.0"
+description = "Multi-instrument automatic music transcription"
+readme = "README.md"
+requires-python = ">=3.10,<3.12"
+license = "Apache-2.0"
+dependencies = [
+    "python-dotenv",
+    "torch==2.2.2",
+    "torchaudio==2.2.2",
+    "yt-dlp",
+    "yt-dlp-youtube-oauth2 @ https://github.com/coletdjnz/yt-dlp-youtube-oauth2/archive/refs/heads/master.zip",
+    "mido",
+    "mir-eval @ git+https://github.com/craffel/mir_eval.git",
+    "lightning>=2.2.1",
+    "deprecated",
+    "librosa",
+    "einops",
+    "transformers==4.45.1",
+    "numpy==1.26.4",
+    "wandb",
+    "gradio-log",
+]
+
+[project.optional-dependencies]
+dev = [
+    "matplotlib",
+    "mirdata",
+    "pytest",
+    "pytest-timeout",
+    "cosine-annealing-warmup @ git+https://github.com/katsura-jp/pytorch-cosine-annealing-with-warmup.git",
+    "smart-open",
+]
+
+[project.scripts]
+yourmt3 = "model_helper:main"
+
+[[tool.uv.index]]
+name = "pytorch-cu118"
+url = "https://download.pytorch.org/whl/cu118"
+explicit = true
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cu118", marker = "sys_platform == 'linux'" },
+]
+torchaudio = [
+    { index = "pytorch-cu118", marker = "sys_platform == 'linux'" },
+]
+
+[tool.setuptools]
+py-modules = ["app", "html_helper", "model_helper"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = [
+    "amt",
+    "amt.config*",
+    "amt.model*",
+    "amt.utils*",
+]
+namespaces = true

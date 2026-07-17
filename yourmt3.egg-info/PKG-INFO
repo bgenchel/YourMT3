@@ -1,0 +1,45 @@
+Metadata-Version: 2.4
+Name: yourmt3
+Version: 0.1.0
+Summary: Multi-instrument automatic music transcription
+License-Expression: Apache-2.0
+Requires-Python: <3.12,>=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: python-dotenv
+Requires-Dist: torch==2.2.2
+Requires-Dist: torchaudio==2.2.2
+Requires-Dist: yt-dlp
+Requires-Dist: yt-dlp-youtube-oauth2 @ https://github.com/coletdjnz/yt-dlp-youtube-oauth2/archive/refs/heads/master.zip
+Requires-Dist: mido
+Requires-Dist: mir-eval @ git+https://github.com/craffel/mir_eval.git
+Requires-Dist: lightning>=2.2.1
+Requires-Dist: deprecated
+Requires-Dist: librosa
+Requires-Dist: einops
+Requires-Dist: transformers==4.45.1
+Requires-Dist: numpy==1.26.4
+Requires-Dist: wandb
+Requires-Dist: gradio-log
+Provides-Extra: dev
+Requires-Dist: matplotlib; extra == "dev"
+Requires-Dist: mirdata; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-timeout; extra == "dev"
+Requires-Dist: cosine-annealing-warmup @ git+https://github.com/katsura-jp/pytorch-cosine-annealing-with-warmup.git ; extra == "dev"
+Requires-Dist: smart-open; extra == "dev"
+
+---
+title: YourMT3
+emoji: 🎸
+colorFrom: purple
+colorTo: red
+sdk: gradio
+sdk_version: 4.39.0
+app_file: app.py
+pinned: false
+license: apache-2.0
+---
+[arxiv:2407.04822](https://arxiv.org/abs/2407.04822)
+
+Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+
