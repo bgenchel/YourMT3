@@ -1,3 +1,4 @@
+LICENSE
 README.md
 app.py
 html_helper.py
