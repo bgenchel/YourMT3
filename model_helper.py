@@ -596,6 +596,13 @@ def main():
     )
     parser.add_argument("audio_file", type=Path)
     parser.add_argument("midi_file", type=Path)
+    parser.add_argument(
+        "device",
+        nargs="?",
+        choices=["cpu", "cuda", "cuda:0", "cuda:1"],
+        default="None",
+        type=str,
+    )
     args = parser.parse_args()
 
     model = load_default_model()
